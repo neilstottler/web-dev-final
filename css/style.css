@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+
+#container {
+	margin: 0 auto;  
+}
+
+p {
+	text-align: center;
+}
+
+
+nav {
+
+	background-color: #1E9AF4;
+	text-align: center;
+	 
+}
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+	background-color: #1E9AF4;
+	text-align: center;
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+	text-align: center;
+	
+}
+
+nav a:hover { 
+	background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+	text-align: left;
+}
+
+
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; 
+}
+	
+
+nav ul li:hover > ul {
+	display:inherit;
+	text-align: left;
+}
+	
+
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
+
+	
+
+li > a:after { content:  ' - '; }
+li > a:only-child:after { content: ''; }
