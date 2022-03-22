@@ -1,3 +1,5 @@
+/* Nav specific style should be done here */
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
@@ -5,11 +7,6 @@
 #container {
 	margin: 0 auto;  
 }
-
-p {
-	text-align: center;
-}
-
 
 nav {
 
@@ -75,8 +72,3 @@ nav ul ul ul li {
 	top:-60px; 
 	left:170px;
 }
-
-	
-
-li > a:after { content:  ' - '; }
-li > a:only-child:after { content: ''; }
