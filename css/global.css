@@ -1,0 +1,17 @@
+/* global styling should be done here */
+
+.center-block {
+	font-family: Garamond, serif;
+	max-width: 50%;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-bottom: 50px;
+}
+
+footer {
+    margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+	background-color: #1E9AF4;
+	padding: 10px;
+}
