@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql = "SELECT username FROM accounts where username = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
-            
+
             // Bind variables to the prepared statement as parameters
             /*
             Self note: the s represents the number of variables in the sql query
@@ -134,6 +134,58 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <title>Sign Up</title>
     </head>
     <body>
+
+    <div class="Top">
+		<div class="rt-container">
+			<div class="col-rt-12">
+				<div class="Scriptcontent">
+
+					<div id="container">
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="AboutUs.html">About Us</a>
+									<!-- First Tier Drop Down -->
+									<ul>
+										<li><a href="Contact.html">Contact</a></li>
+										<!-- <li><a href="#">Tutorials</a></li> -->
+									</ul>
+								</li>
+								<li><a href="YourBudget.html">Your Budget</a>
+									<!-- First Tier Drop Down -->
+									<ul>
+										<li><a href="#">Enter Spending</a></li>
+										<li><a href="#">Enter Income</a></li>
+										<li><a href="#">See Spending</a>
+
+											<ul>
+												<li><a href="WeeklyBudgeting.html">Weekly</a></li>
+												<li><a href="MonthlySpending.html">Montlhy</a></li>
+												<li><a href="AnnualSpending.html">Annually</a>
+													<!-- Third Tier Drop Down -->
+													<!-- <ul>
+										<li><a href="#">Stuff</a></li>
+										<li><a href="#">Things</a></li>
+										<li><a href="#">Other Stuff</a></li>
+									</ul> -->
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<!-- <li><a href="#">Inspiration</a></li> -->
+
+
+							</ul>
+						</nav>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
         <article class="center-block">
             <h2>Sign Up</h2>
             <p>Please enter your information below.</p>
