@@ -1,2 +1,2 @@
-# Website Development Final Spring 2022
-Welcome! You've found final progect for four students website development class. Our goal with this project is to create a site for anyone to enter their spendings and visualize it. 
+# Web Development Final Spring 2022
+Welcome! You've found our final project for Web Development. The goal for this project is to create a site that anyone can use to enter their spending and visualize a budget.
