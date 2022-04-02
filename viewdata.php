@@ -162,5 +162,3 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 		
 	</article>
 </body>
-
-</html>
