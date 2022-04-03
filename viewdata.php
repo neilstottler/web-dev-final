@@ -154,11 +154,17 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 		<!-- scripts for table -->
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript" src="js/linechart.js"></script>
-		
+		<script type="text/javascript" src="js/calendar.js"></script>
 
 		<!-- graph stuff -->
+		<br>
 		<button id="change">Click to change the format</button>
 		<div id="chart_div"></div>
+
+		<div id="calendar_basic" style="width: 1000px; height: 450px;"></div>
+
 		
 	</article>
 </body>
+
+</html>
