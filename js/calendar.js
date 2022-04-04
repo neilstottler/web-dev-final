@@ -6,47 +6,40 @@ function drawChart() {
     dataTable.addColumn({ type: 'date', id: 'Date' });
     dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
 
-    for (let i = 0; i < graphprice.length; i++) {
-        /*
-        dataTable.addRows([
-            //year month day price
-            [new Date(dateconvert[i][0], dateconvert[i][1] - 1, dateconvert[i][2]), graphprice[i]]
-        ]);*/
 
-        //checks if i will be outside of array
-        if (i != graphprice.length - 1) {
-            try {
-                var item1 = dateconvert[i].toString();
-                var item2 = dateconvert[i + 1].toString();
-                //checking for dupe dates and adding the price to be a total sum
-                if (item1 === item2) {
-                    //console.log("DUPPP didn't add: " + dateconvert[i]);
-                    //need to add prices and remove the old ones from the array then aff to calendar
-                } else {
-                    dataTable.addRows([
-                        //year month day price
-                        [new Date(dateconvert[i][0], dateconvert[i][1] - 1, dateconvert[i][2]), graphprice[i]]
-                    ]);
-                }
-            } catch (err) {
-                //console.log(err);
+    const dates_prices = new Map();
+
+    //insert first value
+    dates_prices.set(graphdate[0], graphprice[0]);
+
+    //insert a key: value in a loop then check on the second pass if the key already exists, then update key if it does?
+    for (let i = 1; i < graphprice.length; i++) {
+
+            //date already exists!
+            if (dates_prices.has(graphdate[i])) {
+
+                //gets the current value stored for conflicting date
+                let addme = dates_prices.get(graphdate[i]);
+                let final = addme + graphprice[i];
+                dates_prices.set(graphdate[i], final);
+                
+            } else {
+                //insert data where there is no conflicts
+                dates_prices.set(graphdate[i], graphprice[i]);
+
             }
 
-        //the last i should be inserted
-        } else {
-            dataTable.addRows([
-                //year month day price
-                [new Date(dateconvert[i][0], dateconvert[i][1] - 1, dateconvert[i][2]), graphprice[i]]
-            ]);
-        }
+        
     }
 
-    /*
-    dataTable.addRows([
-        [new Date(2022, 9, 4), 10],
-        [new Date(2022, 9, 5), 3]
-    ]);
-    */
+    //we insert the data into the chart here
+    for(let i = 1; i < graphprice.length; i++) {
+        dataTable.addRows([
+            //year month day price
+            [new Date(dateconvert[i][0], dateconvert[i][1] - 1, dateconvert[i][2]), dates_prices.get(graphdate[i])]
+        ]);
+    }
+
 
     var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
 
