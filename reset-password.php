@@ -12,7 +12,9 @@ require_once "config.php";
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
 $new_password_err = $confirm_password_err = "";
- 
+$username = $_SESSION["username"];
+
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
@@ -46,7 +48,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Set parameters
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
-            $param_id = $_SESSION["id"];
+
+            //user ID
+			$query = "SELECT user_id FROM accounts where username = '" . $username . "'";
+			$result_id = mysqli_query($link, $query);
+
+			//grab user ID from object thing and store it
+			if (mysqli_num_rows($result_id) > 0) {
+				// output data of each row
+				while ($row = mysqli_fetch_assoc($result_id)) {
+					$param_id = $row["user_id"];
+				}
+			} else {
+				echo "0 results";
+			}
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
