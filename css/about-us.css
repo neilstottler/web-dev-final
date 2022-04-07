@@ -1,9 +1,12 @@
 /* about us page should be done here */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
 .member {
     display: inline-block;
-    border: 1px solid red;
+    /* border: 1px solid rgb(0, 0, 0); */
     padding: 1rem 1rem;
     vertical-align: middle;
+
 }
 
 .about-us {
@@ -16,4 +19,13 @@
 .member-container {
     margin-left: 10%;
 	margin-right: 10%;
+}
+
+
+.member:hover {
+    outline: #333 solid 2px;
+   border: solid 1px black; 
+  color: FF0000;
+  
+}
 }
