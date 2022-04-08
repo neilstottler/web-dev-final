@@ -1,5 +1,7 @@
 <?php
-require "topnav.php";
-require "footer.php";
-?>
 
+require("php/header.php");
+require("php/index.php");
+require("php/footer.php");
+
+?>

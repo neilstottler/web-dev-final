@@ -77,9 +77,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 //echo htmlspecialchars($_SERVER["PHP_SELF"]);
                 echo ('<form action="php/processdelete.php" method="post" id="delete_data">');
 
-
+                $count = 0;
                 while ($row = mysqli_fetch_assoc($result_items)) {
-
                     //spit values in. just in case jank.
                     $itemid = $row["item_id"];
                     $itemname = $row["item_name"];
@@ -117,9 +116,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     </td>');
 
                     echo ('<td id="delete">
-                    <input type="checkbox" id="delete_box" name="delete_box[]" value="delete">
+                    <input type="checkbox" id="delete_box" name="delete_box[]" value='.$count.'>
                     </td>');
                     echo ('</tr>');
+                    $count++;
                 }
             } else {
                 echo "0 results";
