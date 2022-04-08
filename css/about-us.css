@@ -1,12 +1,10 @@
 /* about us page should be done here */
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
-
 .member {
     display: inline-block;
-    /* border: 1px solid rgb(0, 0, 0); */
+    border: 1px solid black;
+
     padding: 1rem 1rem;
     vertical-align: middle;
-
 }
 
 .about-us {
@@ -21,11 +19,20 @@
 	margin-right: 10%;
 }
 
-
-.member:hover {
-    outline: #333 solid 2px;
-   border: solid 1px black; 
-  color: FF0000;
-  
+.member :hover {
+    background-color: transparent;
+    
 }
+
+.member-container  :hover {
+    box-shadow: 0 0 0 3px #424141;
+}
+
+.hide{
+    display: none;
+}
+
+.reveal:hover + .hide {
+    display: block;
+    color: blue;
 }
