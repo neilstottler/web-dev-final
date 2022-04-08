@@ -19,6 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>Welcome</title>
     <link rel="stylesheet" href="css/nav-style.css">
 	<link rel="stylesheet" href="css/global.css">
+	<script type="text/javascript" src="js/adddata.js"></script>
 <body>
 
 <div class="Top">
@@ -75,8 +76,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site. Add Data.</h1>
     <p>
         <a href="reset-password.php">Reset Your Password</a>
-        <a href="logout.php">Sign Out of Your Account</a><br>
-		<a href="viewdata.php">View Data</a><br>
+        <a href="logout.php">Sign Out of Your Account</a>
+		<a href="viewdata.php">View Data</a>
+		<a href="editdata.php">Edit Data</a>
+		<a href="deletedata.php">Delete Data</a>
+
     </p>
 
 	<!-- add that data -->
@@ -165,11 +169,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	}
 	?>
 	
-	<!-- user_id item_name price date_bought location notes -->
-	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+	<!-- user_id item_name price date_bought location notes onsubmit="required() -->
+	<form name="enterdata" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <label>Item Name</label><br>
         <input type="text" name="itemname" class="form-control <?php echo (!empty($itemname_err)) ? 'is-invalid' : ''; ?>"><br>
-        <span><?php echo $itemname_err; ?></span><br>     
+        <span id="itemname_id"><?php echo $itemname_err; ?></span><br>     
         
         <label>Price</label><br>
         <input type="number" name="itemprice" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"><br>

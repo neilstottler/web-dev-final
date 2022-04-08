@@ -84,7 +84,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 		<p>
 			<a href="reset-password.php">Reset Your Password</a>
 			<a href="logout.php">Sign Out of Your Account</a>
-			<a href="adddata.php">Add Data</a><br>
+			<a href="adddata.php">Add Data</a>
+			<a href="editdata.php">Edit Data</a>
+			<a href="deletedata.php">Delete Data</a>
 		</p>
 		<style>
 			table, th, td {
