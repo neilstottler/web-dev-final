@@ -1,7 +1,8 @@
 /* about us page should be done here */
 .member {
     display: inline-block;
-    border: 1px solid red;
+    border: 1px solid black;
+
     padding: 1rem 1rem;
     vertical-align: middle;
 }
@@ -19,6 +20,19 @@
 }
 
 .member :hover {
+    background-color: transparent;
+    
+}
 
-    outline:black;
+.member-container  :hover {
+    box-shadow: 0 0 0 3px #424141;
+}
+
+.hide{
+    display: none;
+}
+
+.reveal:hover + .hide {
+    display: block;
+    color: blue;
 }
