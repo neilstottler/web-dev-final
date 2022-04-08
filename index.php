@@ -1,5 +1,5 @@
 <?php
-include "topnav.php";
-
+require "topnav.php";
+require "footer.php";
 ?>
 
