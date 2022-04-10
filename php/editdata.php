@@ -15,11 +15,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <article class="center-block">
     <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     <p>
-        <a href="reset-password.php">Reset Your Password</a>
-        <a href="logout.php">Sign Out of Your Account</a>
-        <a href="viewdata.php">View Data</a>
-        <a href="adddata.php">Edit Data</a>
-        <a href="deletedata.php">Delete Data</a>
+        <a href="php/reset-password.php">Reset Your Password</a>
+        <a href="php/logout.php">Sign Out of Your Account</a>
+        <a href="php/viewdata.php">View Data</a>
+        <a href="php/adddata.php">Edit Data</a>
+        <a href="php/deletedata.php">Delete Data</a>
 
     </p>
     <style>

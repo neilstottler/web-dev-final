@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: viewdata.php");
+    header("location: php/viewdata.php");
     exit;
 }
 
@@ -90,58 +90,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </head>
     <body>
 
-    <div class="Top">
-		<div class="rt-container">
-			<div class="col-rt-12">
-				<div class="Scriptcontent">
-
-					<div id="container">
-						<nav>
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="AboutUs.html">About Us</a>
-									<!-- First Tier Drop Down -->
-									<ul>
-										<li><a href="Contact.html">Contact</a></li>
-										<!-- <li><a href="#">Tutorials</a></li> -->
-									</ul>
-								</li>
-								<li><a href="YourBudget.html">Your Budget</a>
-									<!-- First Tier Drop Down -->
-									<ul>
-										<li><a href="#">Enter Spending</a></li>
-										<li><a href="#">Enter Income</a></li>
-										<li><a href="#">See Spending</a>
-
-											<ul>
-												<li><a href="WeeklyBudgeting.html">Weekly</a></li>
-												<li><a href="MonthlySpending.html">Montlhy</a></li>
-												<li><a href="AnnualSpending.html">Annually</a>
-													<!-- Third Tier Drop Down -->
-													<!-- <ul>
-										<li><a href="#">Stuff</a></li>
-										<li><a href="#">Things</a></li>
-										<li><a href="#">Other Stuff</a></li>
-									</ul> -->
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<!-- <li><a href="#">Inspiration</a></li> -->
-
-
-							</ul>
-						</nav>
-					</div>
-
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-
     <h2>Login</h2>
     <p>Please enter your credentials.</p>
 
@@ -162,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <input type="submit" class="btn btn-primary" value="Login">
 
-        <p>Don't have an account? <a href="create_account.php">Sign up</a>.</p>
+        <p>Don't have an account? <a href="php/create_account.php">Sign up</a>.</p>
     </form>
     </body>
 </html> 

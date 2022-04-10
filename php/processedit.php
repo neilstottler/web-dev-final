@@ -6,7 +6,7 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
+    header("location: php/login.php");
     exit;
 }
 ?>
@@ -37,7 +37,7 @@ for ($i = 0; $i < $arrLength; $i++) {
 
 if (mysqli_query($link, $sql)) {
   echo "Record updated successfully. <br>";
-  header('Location: ../viewdata.php');
+  header('Location: php/viewdata.php');
 } else {
   echo "Error updating record: " . mysqli_error($link) . "<br>";
 }

@@ -6,7 +6,7 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
+    header("location: php/login.php");
     exit;
 }
 ?>
@@ -28,11 +28,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
 
         <p>
-            <a href="reset-password.php">Reset Your Password</a>
-            <a href="logout.php">Sign Out of Your Account</a>
-            <a href="adddata.php">Add Data</a>
-            <a href="viewdata.php">View Data</a>
-            <a href="editdata.php">Edit Data</a>
+            <a href="php/reset-password.php">Reset Your Password</a>
+            <a href="php/logout.php">Sign Out of Your Account</a>
+            <a href="php/adddata.php">Add Data</a>
+            <a href="php/viewdata.php">View Data</a>
+            <a href="php/editdata.php">Edit Data</a>
         </p>
 
         <table>
