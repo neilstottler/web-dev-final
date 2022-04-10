@@ -11,8 +11,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
 
 <head>
 	<meta charset="UTF-8">
@@ -20,23 +18,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 	<link rel="stylesheet" href="css/nav-style.css">
 	<link rel="stylesheet" href="css/global.css">
 
+
 	<script>
 		//my stuff
 		const graphprice = [];
 		const graphdate = [];
 	</script>
 
-<body>
-
-	<article class="center-block">
-		<h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
-		<p>
-			<a href="reset-password.php">Reset Your Password</a>
-			<a href="logout.php">Sign Out of Your Account</a>
-			<a href="adddata.php">Add Data</a>
-			<a href="editdata.php">Edit Data</a>
-			<a href="deletedata.php">Delete Data</a>
-		</p>
 		<style>
 			table, th, td {
 				border: 1px solid;

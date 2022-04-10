@@ -13,39 +13,27 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
 <?php
 //variables
-$result_items = $itemid = $checkbox = "";
+$result_items = $item_id = $itemid = $checkbox = "";
 
 //this is a required item so we can count it
-$arrLength = count($_POST["itemid_box"]);
+$itemid = $_POST["itemid_box"];
 
-$deleteArray = [];
-$itemIdArray = [];
+$checkbox = $_POST["delete_box"];
 
-//run through all the entries
-for ($i = 0; $i < $arrLength; $i++) {
-    array_push($deleteArray, null);
-
-    if (isset($_POST["delete_box"][$i]) != null) {
-      array_push($deleteArray, $_POST["delete_box"][$i]);
-	  echo("we're at: ". [$i]. "<br>");
-    }
-
-	if (isset($_POST["delete_box"][$i]) == null) {
-		echo('null');
-	}
-    array_push($itemIdArray, $_POST["itemid_box"][$i]);
-
-	echo ($deleteArray[$i]. " <br>");
-	echo ($itemIdArray[$i]. " <br>");
-    //$result_items = mysqli_query($link, $sql);
+//DELETE FROM item_table WHERE item_id = 'x'
+for($i =0; $i<count($checkbox); $i++){
+	$item_id = $itemid[$checkbox[$i]];
+	//echo($checkbox[$i]." checkbox i <br>");
+	//echo($itemid[$checkbox[$i]]. " item id i <br>");
+	$sql = 'DELETE FROM item_table WHERE item_id = "'.  $item_id .'"';
+	$result_items = mysqli_query($link, $sql);
 }
 
-/*
 if (mysqli_query($link, $sql)) {
   echo "Record updated successfully. <br>";
   header('Location: ../viewdata.php');
 } else {
   echo "Error updating record: " . mysqli_error($link) . "<br>";
 }
-*/
+
 ?>
