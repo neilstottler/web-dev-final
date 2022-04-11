@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: php/viewdata.php");
+    header("location: viewdata.php");
     exit;
 }
 
@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to the page to view data
-                            header("location: viewdata.php");
+                            header("location: ../viewdata.php");
                         } else{
                             // Password is not valid
                             $login_err = "Invalid username or password.";

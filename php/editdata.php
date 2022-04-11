@@ -11,17 +11,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 ?>
 
-<html>
 <article class="center-block">
     <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
-    <p>
-        <a href="php/reset-password.php">Reset Your Password</a>
-        <a href="php/logout.php">Sign Out of Your Account</a>
-        <a href="php/viewdata.php">View Data</a>
-        <a href="php/adddata.php">Edit Data</a>
-        <a href="php/deletedata.php">Delete Data</a>
-
-    </p>
     <style>
         table,
         th,
@@ -118,11 +109,4 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
         ?>
     </table>
-
-    <script type="text/javascript" src="js/editdata.js"></script>
-    <script>
-        tables();
-    </script>
 </article>
-
-</html>

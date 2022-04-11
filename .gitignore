@@ -1,3 +1,4 @@
 *.bak
 config.*
 config.php
+php/config.php

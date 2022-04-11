@@ -7,7 +7,7 @@ session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: php/login.php");
+    header("location: login.php");
     exit;
 }
 ?>
@@ -24,14 +24,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 
     <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site. Add Data.</h1>
-    <p>
-        <a href="php/reset-password.php">Reset Your Password</a>
-        <a href="php/logout.php">Sign Out of Your Account</a>
-		<a href="php/viewdata.php">View Data</a>
-		<a href="php/editdata.php">Edit Data</a>
-		<a href="php/deletedata.php">Delete Data</a>
-
-    </p>
 
 	<!-- add that data -->
 	<?php 
@@ -107,7 +99,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				
 				if(mysqli_stmt_execute($stmt)){
 					// Redirect to view data page
-					header("location: php/viewdata.php");
+					header("location: viewdata.php");
 				} else{
 					echo "Oops! Something went wrong.";
 				}

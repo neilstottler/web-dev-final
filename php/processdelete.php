@@ -1,12 +1,12 @@
 <?php
 //this is our config file so I can put this on github without creds
-require_once "../config.php";
+require_once "config.php";
 
 session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-  header("location: php/login.php");
+  header("location: login.php");
   exit;
 }
 ?>
