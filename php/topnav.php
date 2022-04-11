@@ -20,7 +20,7 @@
 		<li><a href="editdata.php">Edit Data</a></li>
 		<li><a href="deletedata.php">Delete Data</a></li>
 		<li><a href="reset-password.php">Change Password</a></li>
-		<li><a href="signout.php">Sign Out</a></li>
+		<li><a href="logout.php">Sign Out</a></li>
 	</ul>
 </ul>
 </nav>
