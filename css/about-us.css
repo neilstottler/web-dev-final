@@ -1,7 +1,6 @@
-/* about us page should be done here */
 .member {
     display: inline-block;
-    border: 1px solid black;
+    border: 10px solid black;
 
     padding: 1rem 1rem;
     vertical-align: middle;
@@ -26,6 +25,8 @@
 
 .member-container  :hover {
     box-shadow: 0 0 0 3px #424141;
+    animation-duration: .00001s;
+    
 }
 
 .hide{
@@ -35,4 +36,10 @@
 .reveal:hover + .hide {
     display: block;
     color: blue;
+    animation-duration: .00001s;
+}
+
+.reveal {
+    font-size: 80;
+    padding: 2rem 2rem;
 }
