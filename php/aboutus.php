@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html>
 
 <head>
-	<title>COMP4650 - Web Development Final Project</title>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="css/nav-style.css">
-	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/about-us.css">
-
 </head>
-
-<body>
-	<article class="center-block about-us">
+<article class="center-block about-us">
 
 		<header>
 			<h2>About Us</h2>
@@ -62,9 +53,3 @@
 			</div>
 		</article>
 	</article>
-	<footer>
-		// Something something 'COMP#### Web Development Project, Spring 2022'
-		<p>Some footer text here.</p>
-	</footer>
-</body>
-</html>

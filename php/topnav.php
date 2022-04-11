@@ -11,9 +11,9 @@
 
 <nav>
 <ul>
-	<li><a href="index.html">Home</a></li>
-	<li><a href="AboutUs.html">About Us</a></li>
-	<li><a href="#">Account</a></li>
+	<li><a href="index.php">Home</a></li>
+	<li><a href="aboutus.php">About Us</a></li>
+	<li><a href="login.php">Account</a></li>
 	<ul>
 		<li><a href="viewdata.php">View Data</a></li>
 		<li><a href="adddata.php">Add Data</a></li>
