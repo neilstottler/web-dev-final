@@ -1,5 +1,5 @@
 <?php
 require "php/topnav.php";
-include "php/login.php";
+include "php/processdelete.php";
 require "php/footer.php";
 ?>

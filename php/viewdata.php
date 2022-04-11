@@ -6,10 +6,11 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-	header("location: login.php");
+	header("location: php/login.php");
 	exit;
 }
 ?>
+
 
 <head>
 	<meta charset="UTF-8">
@@ -17,15 +18,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 	<link rel="stylesheet" href="css/nav-style.css">
 	<link rel="stylesheet" href="css/global.css">
 
-	<!--required-->
+
 	<script>
 		//my stuff
 		const graphprice = [];
 		const graphdate = [];
 	</script>
 
-	<article class="center-block">
-		<h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
 		<style>
 			table, th, td {
 				border: 1px solid;
