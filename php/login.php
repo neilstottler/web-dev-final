@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["username"] = $username;
 
                             // Redirect user to the page to view data
-                            header("location: ../viewdata.php");
+                            header("location: viewdata.php");
                         } else {
                             // Password is not valid
                             $login_err = "Invalid username or password.";
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
-    <article class="center-block">
+    <article class="center-block login">
         <div class="login-div">
             <h2>Login</h2>
             <p>Please enter your credentials.</p>
@@ -98,19 +98,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             ?>
 
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <label>Username</label><br>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="login-form">
+                <label class="username">Username</label><br>
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>"><br>
                 <span><?php echo $username_err; ?></span>
 
-                <label>Password</label><br>
+                <label class="password">Password</label><br>
                 <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"><br>
                 <span><?php echo $password_err; ?></span>
 
                 <br>
                 <input type="submit" class="btn btn-primary" value="Login">
 
-                <p>Don't have an account? <a href="php/create_account.php">Sign up</a>.</p>
+                <p>Don't have an account? <a href="create_account.php">Sign up</a>.</p>
             </form>
         </div>
     </article>

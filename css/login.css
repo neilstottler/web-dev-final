@@ -1,9 +1,11 @@
-.username .password {
+label .username .password {
     text-align: left !important;
 }
 
 .login-div {
     text-align: center;
+    margin-top: 20%;
+    margin-bottom: 20%;
 }
 
 .btn {
@@ -25,3 +27,7 @@
     box-sizing: border-box;
 }
 
+.login {
+    font-family: 'Times New Roman', Times, serif;
+    height: 100%;
+}
